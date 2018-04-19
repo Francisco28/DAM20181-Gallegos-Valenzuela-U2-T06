@@ -15,4 +15,13 @@
 
 <ion-content padding>
 
+    <ion-card #myCard *ngFor="let item of quotes.data.sports" >
+
+        <ion-card-content>
+            <ion-card-title>
+              {{item.name}}
+        </ion-card-title>
+      
+      </ion-card-content>
+    </ion-card>
 </ion-content>

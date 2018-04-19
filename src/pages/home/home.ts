@@ -15,7 +15,7 @@ export class HomePage {
     cadena: ''
   };
 
-  public mensaje: boolean = false;
+  public exceptionn: boolean = false;
 
   constructor(public navCtrl: NavController, public quotes: QuoteService) {
     this.quotes.getQuotes();
@@ -28,7 +28,7 @@ export class HomePage {
       this.navCtrl.push(PerfilPage);
     }
     else{
-      this.mensaje = true;
+      this.exceptionn = true;
       console.log("Este correo es incorrecto");
     }
 
