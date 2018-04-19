@@ -6,10 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
 import { PerfilPage } from '../pages/perfil/perfil';
 import { DeportesPage } from '../pages/deportes/deportes';
 
+import {HttpModule} from '@angular/http';
 import { QuoteService } from '../services/quote';
 
 
@@ -23,7 +23,8 @@ import { QuoteService } from '../services/quote';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

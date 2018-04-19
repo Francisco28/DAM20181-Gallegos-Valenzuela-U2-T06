@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PerfilPage } from '../perfil/perfil';
 
-import { QuoteService} from '../../services/quote';
+import { QuoteService } from '../../services/quote';
 
 @Component({
   selector: 'page-home',
@@ -10,13 +10,27 @@ import { QuoteService} from '../../services/quote';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-      
+
+  public email: any = {
+    cadena: ''
+  };
+
+  public mensaje: boolean = false;
+
+  constructor(public navCtrl: NavController, public quotes: QuoteService) {
+    this.quotes.getQuotes();
   }
 
 
-  LogIn():void{
-    this.navCtrl.push(PerfilPage);
-  }
+  LogIn(): void {
 
+    if (this.email.cadena == this.quotes.data.mail) {
+      this.navCtrl.push(PerfilPage);
+    }
+    else{
+      this.mensaje = true;
+      console.log("Este correo es incorrecto");
+    }
+
+  }
 }

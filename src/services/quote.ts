@@ -12,7 +12,7 @@ export class QuoteService{
     }
 
     getQuotes(){
-        this.http.get("http://localhost:8100/sports.json")
+        this.http.get("http://localhost:8080/Servidor/sports.json")
             .subscribe(
                 res=>{
                     this.data=res.json();
