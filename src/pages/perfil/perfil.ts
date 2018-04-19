@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DeportesPage } from '../deportes/deportes';
 
 /**
  * Generated class for the PerfilPage page.
@@ -20,6 +21,10 @@ export class PerfilPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
+  }
+
+  SportsIn():void{
+    this.navCtrl.push(DeportesPage);
   }
 
 }

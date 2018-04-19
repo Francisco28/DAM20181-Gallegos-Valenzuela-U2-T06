@@ -1,19 +1,32 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Perfil</ion-title>
+    <ion-title>
+      Perfil
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card #myCard *ngFor="let item of quotes.data">
+  <ion-card>
     <img [src]="">
+    
+    
     <ion-card-content>
       <ion-card-title>
-        <p>Hola</p>
+        
+        <p>Nombre: </p>
+        <p>Email:  </p>
+      
       </ion-card-title>
-    </ion-card-content>
-  </ion-card>
+   
+   
+  </ion-card-content>
+</ion-card>
+  
+  <div text-center>
+
+    <button ion-button (click)="SportsIn()">Deportes</button>
+
+  </div>
 </ion-content>

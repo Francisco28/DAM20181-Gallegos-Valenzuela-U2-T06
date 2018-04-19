@@ -4,14 +4,15 @@ import {Http} from '@angular/http';
 @Injectable()
 
 export class QuoteService{
+     //private http:any;
     public data:any;
 
     constructor(private http:Http){
-
+        //this.http = http;
     }
 
     getQuotes(){
-        this.http.get("http://localhost:8080/sports.json")
+        this.http.get("http://localhost:8100/sports.json")
             .subscribe(
                 res=>{
                     this.data=res.json();
